@@ -1,7 +1,12 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri May 14 13:39:49 2021
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D
 
-@author: d19fd
-"""
+cnn = Sequential()
 
+cnn.add(Conv2D(1,
+               [3,3],
+               input_shape=[7,7,1]))
+
+#cnn.summary()
+
+print(cnn.get_weights())
